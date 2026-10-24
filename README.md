@@ -1,6 +1,101 @@
-# Enterprise Agentic RAG (Scalable Pipeline)
+# 🤖 Enterprise Agentic RAG Data Platform (Scalable Mesh)
 
-A production-grade, enterprise-level RAG system built with **LangGraph**, **Portkey LLM Gateway**, and **Gemini Embeddings**. The system distinguishes between technical "True Data" and random "Noisy Data" using semantic re-ranking, history-aware planning, and NeMo Guardrails for input/output safety.
+[![Architecture Flow](docs/images/01_architecture_flow.svg)](docs/images/01_architecture_flow.svg)
+
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.42+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_Core-1C3C3C?style=for-the-badge)](https://langchain.com/)
+[![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-DC2626?style=for-the-badge&logo=qdrant&logoColor=white)](https://qdrant.tech/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+
+A production-grade, enterprise-level Agentic RAG system built with **LangGraph**, **NeMo Guardrails**, **Portkey LLM Gateway**, **Qdrant Vector Database**, and **Gemini Embeddings**. Engineered strictly in accordance with the **Enterprise AI Architect Roadmap (Phases 0 - 5)**.
+
+---
+
+## ⚡ One-Click Cloud Bootstrap (Zero-Touch)
+
+Deploy the complete multi-container stack (Qdrant, FastAPI Engine, and Streamlit UI) on any Ubuntu, Debian, AWS EC2, GCP Compute Engine, or macOS instance with a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/KishorKumarParoi/Advanced_Production_Rag_Data_Agent/main/bootstrap.sh | bash
+```
+
+---
+
+## 🚀 Quick Start & Deployment Options
+
+Clone and launch locally using the unified `deploy.sh` script:
+
+```bash
+git clone https://github.com/KishorKumarParoi/Advanced_Production_Rag_Data_Agent.git
+cd Advanced_Production_Rag_Data_Agent
+chmod +x deploy.sh clear.sh bootstrap.sh
+```
+
+### 1. Docker Compose Mode (Default)
+```bash
+./deploy.sh
+```
+*Builds and runs Qdrant, FastAPI Engine (:8000), and Streamlit UI (:8501).*
+
+### 2. Standalone Container Mode
+```bash
+./deploy.sh --quick
+```
+
+### 3. Native Host Execution
+```bash
+./deploy.sh --host
+```
+
+---
+
+## 🧹 Zero-Cost Teardown ($0.00 Spend)
+
+To cleanly stop and eliminate all active containers, volumes, networks, and background processes:
+
+```bash
+./clear.sh
+```
+
+---
+
+## 📡 API Reference & Integration
+
+### 1. Health Probe
+```bash
+curl -s http://localhost:8000/health | jq .
+```
+**Response:**
+```json
+{
+  "service": "advanced-production-rag",
+  "status": "healthy",
+  "version": "1.0.0"
+}
+```
+
+### 2. Query Agentic RAG
+```bash
+curl -s -X POST http://localhost:8000/query \
+  -H "Content-Type: application/json" \
+  -d '{"q": "What is our enterprise data retention policy?", "thread_id": "session_123"}' | jq .
+```
+
+### 3. Visual Agent Graph
+```bash
+# View or download the Mermaid DAG of the agent workflow
+curl -s http://localhost:8000/graph --output graph.png
+```
+
+---
+
+## 🏗️ Technical Architecture & Roadmap
+
+For full architectural blueprints, NeMo Colang safety policies, FlashRank cross-encoder reranking algorithms, and RAGAS eval metrics, consult [ARCHITECTURE.md](ARCHITECTURE.md).
+
+---
 
 ## Key Features
 

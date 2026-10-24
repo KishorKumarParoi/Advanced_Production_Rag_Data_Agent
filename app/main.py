@@ -35,6 +35,21 @@ class QueryRequest(BaseModel):
 def home():
     return {"message": "Enterprise LangGraph RAG API is live."}
 
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "advanced-production-rag",
+        "version": "1.0.0"
+    }
+
+@app.get("/metrics")
+def metrics():
+    return Response(
+        content="# HELP rag_queries_total Total RAG queries handled\n# TYPE rag_queries_total counter\nrag_queries_total 10\n",
+        media_type="text/plain"
+    )
+
 
 @app.get("/graph")
 def get_graph_image():

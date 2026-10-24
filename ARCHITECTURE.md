@@ -1,4 +1,20 @@
-# Enterprise Agentic RAG: LangGraph · Guardrails · LLM Gateway · RAGAS Evals
+# 🤖 Enterprise Agentic RAG Data Platform - System Architecture Blueprint
+
+[![Architecture Flow](docs/images/01_architecture_flow.svg)](docs/images/01_architecture_flow.svg)
+
+---
+
+## ⚡ Zero-Touch Cloud Bootstrap & Teardown
+
+```bash
+# 🚀 1. One-Click Cloud Bootstrap (EC2 / Ubuntu / macOS)
+curl -fsSL https://raw.githubusercontent.com/KishorKumarParoi/Advanced_Production_Rag_Data_Agent/main/bootstrap.sh | bash
+
+# 🛑 2. Zero-Cost Teardown ($0.00 Spend)
+./clear.sh
+```
+
+---
 
 ```mermaid
 graph LR

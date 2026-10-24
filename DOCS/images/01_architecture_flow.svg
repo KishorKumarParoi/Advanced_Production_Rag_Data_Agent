@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-rag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#040711"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad-rag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="accent-purple-rag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="accent-cyan-rag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="accent-emerald-rag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <filter id="shadow-rag" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bg-grad-rag)"/>
+
+  <!-- Subtle Matrix Grid -->
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.35">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="680"/>
+    <line x1="400" y1="0" x2="400" y2="680"/>
+    <line x1="600" y1="0" x2="600" y2="680"/>
+    <line x1="800" y1="0" x2="800" y2="680"/>
+    <line x1="1000" y1="0" x2="1000" y2="680"/>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(60, 45)">
+    <rect x="0" y="0" width="190" height="28" rx="14" fill="#0284c7" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1"/>
+    <text x="95" y="18" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">ENTERPRISE GENAI</text>
+    
+    <text x="0" y="62" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="28" font-weight="800">Advanced Production RAG &amp; Agentic Data Mesh</text>
+    <text x="0" y="86" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="14">NeMo Guardrails, LangGraph Multi-Hop Orchestration, Qdrant Vector Engine &amp; Logfire Observability</text>
+  </g>
+
+  <!-- Phase 1: Ingestion & Knowledge -->
+  <g transform="translate(60, 170)" filter="url(#shadow-rag)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-rag)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-cyan-rag)"/>
+    <text x="24" y="38" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 1: INGESTION</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Vector Knowledge</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Document Chunking</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Recursive Character Split</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">512 Tokens / 64 Overlap</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Embeddings Pipeline</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">text-embedding-3-small</text>
+      <text x="16" y="66" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">1536-Dimensional Vectors</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Qdrant Vector DB</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">HNSW Indexing (:6333)</text>
+      <text x="16" y="66" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="11">Payload Filtering &amp; Cosine</text>
+    </g>
+  </g>
+
+  <!-- Flow 1 -> 2 -->
+  <path d="M 290 380 L 340 380" stroke="#38bdf8" stroke-width="2.5" fill="none" marker-end="url(#arrow-cyan)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 2: NeMo Guardrails Gate -->
+  <g transform="translate(345, 170)" filter="url(#shadow-rag)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-rag)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-purple-rag)"/>
+    <text x="24" y="38" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 2: GUARDRAILS</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">Safety &amp; Alignment</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">NeMo Guardrails</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Colang 2.0 Policy Engine</text>
+      <text x="16" y="66" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="11">Jailbreak &amp; Prompt Defenses</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">PII &amp; Sensitive Masking</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Regex &amp; NER Redaction</text>
+      <text x="16" y="66" fill="#10b981" font-family="-apple-system, sans-serif" font-size="11">✓ Zero Credential Leakage</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Groundedness Gate</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Hallucination Mitigation</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Context Adherence &gt; 95%</text>
+    </g>
+  </g>
+
+  <!-- Flow 2 -> 3 -->
+  <path d="M 575 380 L 625 380" stroke="#c084fc" stroke-width="2.5" fill="none" marker-end="url(#arrow-cyan)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 3: LangGraph Agent Loop -->
+  <g transform="translate(630, 170)" filter="url(#shadow-rag)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-rag)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-emerald-rag)"/>
+    <text x="24" y="38" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 3: ORCHESTRATION</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">LangGraph Agent</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Dynamic Query Planner</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Multi-Hop Query Decomposer</text>
+      <text x="16" y="66" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">StateGraph Checkpointing</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Cross-Encoder Re-rank</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">FlashRank / Cohere v3.5</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Top-K Context Filtering</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Context Synthesizer</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Grounded Citations</text>
+      <text x="16" y="66" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="11">Thread Memory Support</text>
+    </g>
+  </g>
+
+  <!-- Flow 3 -> 4 -->
+  <path d="M 860 380 L 910 380" stroke="#34d399" stroke-width="2.5" fill="none" marker-end="url(#arrow-cyan)" stroke-dasharray="4 4"/>
+
+  <!-- Phase 4: Serving & Ops -->
+  <g transform="translate(915, 170)" filter="url(#shadow-rag)">
+    <rect width="230" height="420" rx="16" fill="url(#card-grad-rag)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="6" rx="3" fill="url(#accent-cyan-rag)"/>
+    <text x="24" y="38" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">PHASE 4: SERVING</text>
+    <text x="24" y="65" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">GenAI Serving</text>
+
+    <g transform="translate(20, 90)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">FastAPI Engine :8000</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">POST /query | GET /graph</text>
+      <text x="16" y="66" fill="#38bdf8" font-family="-apple-system, sans-serif" font-size="11">Async Streaming &amp; Rate-Limit</text>
+    </g>
+
+    <g transform="translate(20, 195)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Streamlit UI :8501</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">Thought Process Viewer</text>
+      <text x="16" y="66" fill="#34d399" font-family="-apple-system, sans-serif" font-size="11">Source Verification Badges</text>
+    </g>
+
+    <g transform="translate(20, 300)">
+      <rect width="190" height="85" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="16" y="28" fill="#f8fafc" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">One-Click Deploy</text>
+      <text x="16" y="48" fill="#64748b" font-family="-apple-system, sans-serif" font-size="11">bootstrap.sh | deploy.sh</text>
+      <text x="16" y="66" fill="#c084fc" font-family="-apple-system, sans-serif" font-size="11">Zero-Cost Teardown ($0)</text>
+    </g>
+  </g>
+
+  <!-- Footer Banner -->
+  <g transform="translate(60, 620)">
+    <text x="0" y="20" fill="#64748b" font-family="-apple-system, sans-serif" font-size="12">Single-Command Cloud Bootstrap: curl -fsSL https://raw.githubusercontent.com/KishorKumarParoi/Advanced_Production_Rag_Data_Agent/main/bootstrap.sh | bash</text>
+    <text x="1080" y="20" fill="#34d399" font-family="-apple-system, sans-serif" font-size="12" text-anchor="end" font-weight="600">✓ $0.00 Teardown Verified (clear.sh)</text>
+  </g>
+</svg>
